@@ -26,6 +26,9 @@ module.exports = class Frst
 
                 console.log url if @debug
 
+                # Ensure that there is always a leading slash
+                route = "/#{route}" unless route.match(/^\//)
+
                 "#{@host}#{route}?#{access}"
 
         remote: (options, cb)->
