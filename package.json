@@ -1,6 +1,6 @@
 {
   "name": "frst",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A node.js API client for On Frst Commerce services",
   "keywords": ["frst", "api", "commerce", "rest", "mobile"],
   "author": "Paul English <paul@onfrst.com>",
