@@ -1,5 +1,7 @@
 This is an API client for working with the On Frst Commerce API that is found at `https://api.onfrst.com`
 
+"!https://secure.travis-ci.org/frst/frst-node.png!":http://travis-ci.org/frst/frst-node
+
 ## Usage
 
     FrstClient = require('frst');
