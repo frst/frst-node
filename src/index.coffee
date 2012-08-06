@@ -22,7 +22,7 @@ module.exports = class Frst
                 throw new Error("you must call `url` with a route") unless route
 
                 # TODO can now be accomplished using the Auth header
-                access = if @access_token then "access_token=#{@access_token}"
+                access = if @access_token then "access_token=#{@access_token}" else ""
 
                 console.log url if @debug
 
@@ -31,8 +31,10 @@ module.exports = class Frst
         remote: (options, cb)->
                 throw new Error('remote must be called with a route') unless options.route
 
+                url = @url(options.route)
+
                 data =
-                        url: @url(options.route)
+                        url: url
                         method: options.type
                         json: options.data
 
@@ -40,10 +42,13 @@ module.exports = class Frst
 
                 request data, (err, res, body)->
                         #console.log 'remote res', body
-                        try
-                                body = JSON.parse(body)
-                        catch e
-                                console.log 'err parsing json body', err
+                        if err
+                                console.log url, err
+                        else
+                                try
+                                        body = JSON.parse(body)
+                                catch e
+                                        console.log 'err parsing json body', err
                         err = body if res.statusCode == 404
                         cb(err, body)
 
