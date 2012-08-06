@@ -1,3 +1,5 @@
+request = require "request"
+
 module.exports = class Frst
 
         # This is the core access token that provides user permissions and account access
