@@ -1,8 +1,14 @@
 {
   "name": "frst",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "A node.js API client for On Frst Commerce services",
-  "keywords": ["frst", "api", "commerce", "rest", "mobile"],
+  "keywords": [
+    "frst",
+    "api",
+    "commerce",
+    "rest",
+    "mobile"
+  ],
   "author": "Paul English <paul@onfrst.com>",
   "dependencies": {
     "coffee-script": "1.3.3",
