@@ -6,7 +6,7 @@ module.exports = class Frst
         access_token: null
 
         # This is overridable to allow use with internal api servers if needed
-        host: "http://api.onfrst.com"
+        host: "https://api.onfrst.com"
 
         # If set provides additional logging
         debug: false
