@@ -24,7 +24,7 @@ module.exports = class Frst
                 # TODO can now be accomplished using the Auth header
                 access = if @access_token then "access_token=#{@access_token}" else ""
 
-                console.log url if @debug
+                console.log "fsrt-node: #{url}" if @debug
 
                 # Ensure that there is always a leading slash
                 route = "/#{route}" unless route.match(/^\//)
@@ -41,17 +41,17 @@ module.exports = class Frst
                         method: options.type
                         json: options.data
 
-                console.log('remote', data) if @debug
+                console.log('fsrt-node: remote', data) if @debug
 
                 request data, (err, res, body)->
-                        #console.log 'remote res', body
+                        #console.log 'fsrt-node: remote res', body
                         if err
-                                console.log url, err
+                                console.log "fsrt-node:", url, err
                         else
                                 try
                                         body = JSON.parse(body)
                                 catch e
-                                        console.log 'err parsing json body', err
+                                        console.log 'fsrt-node: err parsing json body', err
                         err = body if res.statusCode == 404
                         cb(err, body)
 
