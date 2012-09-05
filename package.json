@@ -1,6 +1,6 @@
 {
     "name": "frst",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "A node.js API client for On Frst Commerce services",
     "keywords": [
         "frst",
