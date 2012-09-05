@@ -15,5 +15,8 @@
   "main": "lib/index",
   "scripts": {
     "test": "cake test"
+  },
+  "repository": {
+    "url": "https://github.com/frst/frst-node.git"
   }
 }
